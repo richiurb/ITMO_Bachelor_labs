@@ -94,7 +94,7 @@ mv temp /home/man.txt
 echo "It's end of file" >> /home/man.txt
 
 # 27
-diff /home/man.txt /home/test/man.dir/man.txt > /home/patchfile.patch
+diff -u /home/man.txt /home/test/man.dir/man.txt > /home/patchfile.patch
 
 # 28
 mv /home/patchfile.patch /home/test/man.dir/
