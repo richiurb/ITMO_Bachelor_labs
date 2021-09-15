@@ -84,7 +84,7 @@ mv /home/x* /home/test/man.dir/
 cat /home/test/man.dir/* > /home/test/man.dir/man.txt
 
 # 25
-./script.sh /home/man.txt /home/test/man.dir/man.txt  # YES
+./diffscript.sh /home/man.txt /home/test/man.dir/man.txt  # YES
 sleep 5
 
 # 26
@@ -103,5 +103,5 @@ mv /home/patchfile.patch /home/test/man.dir/
 patch /home/test/man.dir/man.txt -i /home/test/man.dir/patchfile.patch
 
 # 30
-./script.sh /home/man.txt /home/test/man.dir/man.txt
+./diffscript.sh /home/man.txt /home/test/man.dir/man.txt
 sleep 5
