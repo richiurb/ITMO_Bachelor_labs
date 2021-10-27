@@ -92,6 +92,7 @@ ls -l /home/test13      # выполним, чтобы увидеть текущ
 
 chmod -R o-r /home/test13
 сhmod -R ugo-x /home/test13
+chmod -R ugo+rX /home/test13    # строка необходима, так как рекурсивно задаёт определённые разрешения на исполнения: директории можно исполнять, файлы - нельзя
 
 
 # 15.
@@ -100,7 +101,7 @@ chmod -R o-r /home/test13
 
 mkdir /home/test14
 chown -R u1:u3 /home/test14
-chmod +t /home/test14
+chmod +t /home/test14       # sticky-bit (запрещает удалять файлы от других пользователей)
 chmod -R og+w /home/test14
 
 
@@ -110,7 +111,7 @@ chmod -R og+w /home/test14
 
 cp /bin/nano /home/test14/nano
 chown u1 /home/test14/nano
-chmod u+s /home/test14/nano
+chmod u+s /home/test14/nano     # SUID (пользователей имеет право выполнять файл с разрешениями владельца файла)
 
 
 # 17.
